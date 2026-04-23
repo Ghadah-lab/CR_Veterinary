@@ -65,7 +65,7 @@
   </div>
 </div>
 
-<!-- Wizard - RTL Order: Step 1 (right) -> Step 5 (left) -->
+<!-- Wizard -->
 <div class="wizard-container">
   <div class="wizard">
     <div class="wizard-step completed">
@@ -315,11 +315,11 @@
     </div>
   </div>
 
-  <!-- Final Actions - RTL: Submit (right) | Counter | Previous (left) -->
+  <!-- Final Actions: Submit LEFT, Previous/Draft RIGHT -->
   <div class="card" style="margin-top: 2rem;">
     <div class="card-body">
       <div class="actions-bar" style="margin-top: 0; border-top: none; padding-top: 0;">
-        <div style="display: flex; gap: 0.75rem;">
+        <div class="actions-right" style="display: flex; gap: 0.75rem;">
           <button class="btn btn-success btn-lg" onclick="submitRequest()">
             <i class="fas fa-paper-plane"></i>
             إرسال
@@ -332,7 +332,7 @@
         <div style="color: #95a5a6; font-size: 0.85rem; font-weight: 600;">
           5 / 5
         </div>
-        <div style="display: flex; gap: 0.75rem;">
+        <div class="actions-left" style="display: flex; gap: 0.75rem;">
           <a href="page5.html" class="btn btn-secondary">
             <i class="fas fa-arrow-right"></i>
             السابق
