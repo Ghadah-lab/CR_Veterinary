@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بيانات الطلب - تغيير نشاط لمنشأة بيطرية</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .readonly-field {
+      background: #f8f9fa !important;
+      color: #5a6c7d !important;
+      border-color: #e1e8ed !important;
+    }
+    .hidden-section {
+      display: none;
+    }
+    .fade-in {
+      animation: fadeIn 0.4s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="main-header">
+  <div class="logo">
+    <div class="logo-icon">ن</div>
+    <div>
+      <div class="logo-text">نماء</div>
+      <div class="logo-sub">NAAMA</div>
+    </div>
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="#" class="highlight">دليل الخدمات الإلكترونية</a></li>
+      <li><a href="#">منصتي</a></li>
+      <li><a href="#">الأخبار والأحداث</a></li>
+      <li><a href="#">عن نماء</a></li>
+      <li><a href="#">الأسئلة الشائعة</a></li>
+      <li><a href="#">تواصل معنا</a></li>
+    </ul>
+  </nav>
+  <div class="user-actions">
+    <div class="lang-switch">
+      <i class="fas fa-globe"></i>
+      <span>English</span>
+    </div>
+    <div class="lang-switch">
+      <i class="fas fa-user"></i>
+      <span>Test Company</span>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="breadcrumb">
+    <a href="index.html">الرئيسية</a>
+    <span class="sep">&gt;</span>
+    <a href="#">دليل الخدمات الإلكترونية</a>
+    <span class="sep">&gt;</span>
+    <span class="current">تغيير نشاط لمنشأة بيطرية</span>
+  </div>
+  <div class="hero-content">
+    <div class="hero-main">
+      <h1 class="hero-title">تغيير نشاط لمنشأة بيطرية</h1>
+      <div class="hero-tags">
+        <span class="tag">خدمات الرخص</span>
+        <span class="tag">الثروة الحيوانية</span>
+        <span class="tag">تراخيص للمنشآت البيطرية</span>
+      </div>
+    </div>
+    <div class="hero-icon">
+      <i class="fas fa-paw"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Wizard - RTL Order: Step 1 (right) -> Step 5 (left) -->
+<div class="wizard-container">
+  <div class="wizard">
+    <div class="wizard-step completed">
+      <div class="step-number"><i class="fas fa-check"></i></div>
+      <div class="step-label">اتفاقية الاستخدام</div>
+    </div>
+    <div class="wizard-step completed">
+      <div class="step-number"><i class="fas fa-check"></i></div>
+      <div class="step-label">البيانات المسترجعة</div>
+    </div>
+    <div class="wizard-step active">
+      <div class="step-number">3</div>
+      <div class="step-label">بيانات الطلب</div>
+    </div>
+    <div class="wizard-step">
+      <div class="step-number">4</div>
+      <div class="step-label">مرفقات الطلب</div>
+    </div>
+    <div class="wizard-step">
+      <div class="step-number">5</div>
+      <div class="step-label">مراجعة الطلب</div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">
+        <i class="fas fa-edit"></i>
+        بيانات الطلب
+      </div>
+    </div>
+    <div class="card-body">
+
+      <!-- Current Project Data -->
+      <div class="side-section">
+        <div class="side-section-title">بيانات المشروع الحالي</div>
+
+        <!-- First row: Activity + License (always visible) -->
+        <div class="form-row form-row-3">
+          <div class="form-group">
+            <label class="form-label">النشاط الحالي <span class="required">*</span></label>
+            <select class="form-control" id="currentActivity" onchange="handleActivityChange()">
+              <option value="">-- اختر --</option>
+              <option value="pharmacy">صيدلية بيطرية</option>
+              <option value="clinic">عيادة بيطرية</option>
+              <option value="falcon">مركز العناية بالصقور</option>
+              <option value="ai">مركز التلقيح الصناعي</option>
+              <option value="pet">محلات العناية غير البيطرية بالحيوانات الاليفة</option>
+              <option value="hospital">مستشفى بيطري</option>
+              <option value="hotel">مركز الإيواء (الخدمات الفندقية)</option>
+              <option value="bird">مركز توزيع الطيور الحية</option>
+              <option value="lab">مختبرات بيطرية</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">رقم الترخيص التشغيلي <span class="required">*</span></label>
+            <select class="form-control" id="licenseNumber" onchange="handleLicenseChange()">
+              <option value="">-- اختر --</option>
+              <option value="24/03/007001/065">24/03/007001/065</option>
+              <option value="25/01/007001/490">25/01/007001/490</option>
+              <option value="24/01/007001/251">24/01/007001/251</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <!-- Empty for alignment -->
+          </div>
+        </div>
+
+        <!-- Hidden section: appears after license selection -->
+        <div id="licenseDetails" class="hidden-section">
+
+          <div class="form-row form-row-3 fade-in">
+            <div class="form-group">
+              <label class="form-label">تاريخ الإصدار</label>
+              <input type="text" class="form-control readonly-field" value="2025-10-20 | 1447-04-28" readonly>
+            </div>
+            <div class="form-group">
+              <label class="form-label">رخصة بلدي</label>
+              <input type="text" class="form-control readonly-field" value="1254854856" readonly>
+            </div>
+            <div class="form-group">
+              <label class="form-label">تاريخ الانتهاء</label>
+              <input type="text" class="form-control readonly-field" value="2027-04-20 | 1448-11-13" readonly>
+            </div>
+          </div>
+
+          <div class="form-row form-row-3 fade-in">
+            <div class="form-group">
+              <label class="form-label">المنطقة</label>
+              <input type="text" class="form-control readonly-field" value="الرياض" readonly>
+            </div>
+            <div class="form-group">
+              <label class="form-label">المحافظة</label>
+              <input type="text" class="form-control readonly-field" value="الخرج" readonly>
+            </div>
+            <div class="form-group">
+              <label class="form-label">المركز</label>
+              <input type="text" class="form-control readonly-field" value="الدلم" readonly>
+            </div>
+          </div>
+
+          <div class="form-row form-row-3 fade-in">
+            <div class="form-group">
+              <label class="form-label">الحي حسب ترخيص البلدية</label>
+              <input type="text" class="form-control readonly-field" value="الفيصلية" readonly>
+            </div>
+            <div class="form-group">
+              <label class="form-label">الشارع</label>
+              <input type="text" class="form-control readonly-field" value="القادسية" readonly>
+            </div>
+            <div class="form-group">
+              <label class="form-label">المساحة الاجمالية</label>
+              <input type="text" class="form-control readonly-field" value="201 م2" readonly>
+            </div>
+          </div>
+
+          <div class="form-row form-row-3 fade-in">
+            <div class="form-group">
+              <label class="form-label">الاحداثيات</label>
+              <input type="text" class="form-control readonly-field" value="24.25" readonly>
+            </div>
+            <div class="form-group">
+              <!-- Empty -->
+            </div>
+            <div class="form-group">
+              <!-- Empty -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- New Project Data (also hidden until license selected) -->
+      <div id="newProjectSection" class="side-section hidden-section">
+        <div class="side-section-title">بيانات المشروع الجديد</div>
+
+        <div class="form-row form-row-2">
+          <div class="form-group">
+            <label class="form-label">النشاط المراد الانتقال إليه <span class="required">*</span></label>
+            <select class="form-control" id="newActivity" onchange="handleNewActivityChange()">
+              <option value="">-- اختر --</option>
+            </select>
+            <small style="color: #7f8c8d; font-size: 0.75rem; margin-top: 0.3rem; display: block;">
+              لا يظهر النشاط الحالي ضمن قائمة الأنشطة المراد إليها باستثناء (عيادة بيطرية – مستشفى بيطري – المختبرات) حيث يمكن التغيير إلى نفس النشاط بنوع منشأة مختلف.
+            </small>
+          </div>
+
+          <div class="form-group hidden" id="establishmentTypeGroup">
+            <label class="form-label">نوع المنشأة <span class="required">*</span></label>
+            <select class="form-control" id="establishmentType">
+              <option value="">-- اختر --</option>
+            </select>
+            <small style="color: #7f8c8d; font-size: 0.75rem; margin-top: 0.3rem; display: block;">
+              عند اختيار نشاط مطابق للنشاط الحالي، لا يظهر نوع المنشأة الحالي ضمن حقل "نوع المنشأة".
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions Bar - RTL: Next (right) | Counter | Previous (left) -->
+      <div class="actions-bar">
+        <div style="display: flex; gap: 0.75rem;">
+          <a href="page5.html" class="btn btn-success" onclick="return validatePage4()">
+            التالي
+            <i class="fas fa-arrow-left"></i>
+          </a>
+          <a href="index.html" class="btn btn-danger">
+            <i class="fas fa-times"></i>
+            إلغاء الطلب
+          </a>
+        </div>
+        <div style="color: #95a5a6; font-size: 0.85rem; font-weight: 600;">
+          3 / 5
+        </div>
+        <div style="display: flex; gap: 0.75rem;">
+          <a href="page3.html" class="btn btn-secondary">
+            <i class="fas fa-arrow-right"></i>
+            السابق
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-content">
+    <div>
+      <div class="footer-title">روابط تهمك</div>
+      <ul class="footer-links">
+        <li><a href="#">منصق العملك</a></li>
+        <li><a href="#">كيف تصل إلى موقعنا</a></li>
+        <li><a href="#">النصة الوطنية الموحدة</a></li>
+        <li><a href="#">وزارة البيئة والمياه والزراعة</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-title">أبرز خدمات الأفراد</div>
+      <ul class="footer-links">
+        <li><a href="#">إصدار سجل منشأة</a></li>
+        <li><a href="#">طلب ترخيص ثروة حيوانية</a></li>
+        <li><a href="#">برنامج دعم صغار مربي الثروة الحيوانية</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-title">أبرز خدمات الأعمال</div>
+      <ul class="footer-links">
+        <li><a href="#">طلب عمالة زراعية</a></li>
+        <li><a href="#">إصدار استيراد حضائر وقواته</a></li>
+        <li><a href="#">حجز موعد مسالخ</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-title">تواصل معنا</div>
+      <ul class="footer-links">
+        <li><a href="#"><i class="fas fa-phone" style="margin-left: 0.5rem;"></i> 199099</a></li>
+        <li><a href="#"><i class="fas fa-envelope" style="margin-left: 0.5rem;"></i> support@naama.sa</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    جميع الحقوق محفوظة © 2025 منصة نماء
+  </div>
+</footer>
+
+<script>
+const allActivities = [
+  { value: 'pharmacy', label: 'صيدلية بيطرية' },
+  { value: 'clinic', label: 'عيادة بيطرية' },
+  { value: 'falcon', label: 'مركز العناية بالصقور' },
+  { value: 'ai', label: 'مركز التلقيح الصناعي' },
+  { value: 'pet', label: 'محلات العناية غير البيطرية بالحيوانات الاليفة' },
+  { value: 'hospital', label: 'مستشفى بيطري' },
+  { value: 'hotel', label: 'مركز الإيواء (الخدمات الفندقية)' },
+  { value: 'bird', label: 'مركز توزيع الطيور الحية' },
+  { value: 'lab', label: 'مختبرات بيطرية' }
+];
+
+const establishmentTypes = {
+  hospital: [
+    { value: 'comprehensive', label: 'المستشفى البيطري الشامل' },
+    { value: 'specialized_large', label: 'المستشفى البيطري التخصصي للحيوانات الكبيرة (الإبل أو الخيل أو الأبقار)' }
+  ],
+  clinic: [
+    { value: 'primary_center', label: 'مركز الرعاية البيطرية الأولية' },
+    { value: 'primary_clinic', label: 'عيادة الرعاية البيطرية الأولية' },
+    { value: 'pet_clinic', label: 'عيادة الحيوانات الأليفة والطيور' },
+    { value: 'mobile', label: 'العيادة البيطرية المتنقلة' },
+    { value: 'comprehensive', label: 'العيادة البيطرية الشاملة' },
+    { value: 'specialized', label: 'العيادة البيطرية التخصصية' }
+  ],
+  lab: [
+    { value: 'first', label: 'مختبر أول' },
+    { value: 'second', label: 'مختبر ثاني' },
+    { value: 'third', label: 'مختبر ثالث' }
+  ]
+};
+
+const currentEstablishmentType = 'primary_clinic';
+
+function handleActivityChange() {
+  // Reset license selection when activity changes
+  document.getElementById('licenseNumber').value = '';
+  hideLicenseDetails();
+}
+
+function handleLicenseChange() {
+  const license = document.getElementById('licenseNumber').value;
+  if (license) {
+    showLicenseDetails();
+  } else {
+    hideLicenseDetails();
+  }
+}
+
+function showLicenseDetails() {
+  document.getElementById('licenseDetails').classList.remove('hidden-section');
+  document.getElementById('newProjectSection').classList.remove('hidden-section');
+  updateNewActivityOptions();
+}
+
+function hideLicenseDetails() {
+  document.getElementById('licenseDetails').classList.add('hidden-section');
+  document.getElementById('newProjectSection').classList.add('hidden-section');
+  document.getElementById('establishmentTypeGroup').classList.add('hidden');
+  document.getElementById('newActivity').value = '';
+  document.getElementById('establishmentType').value = '';
+}
+
+function updateNewActivityOptions() {
+  const current = document.getElementById('currentActivity').value;
+  const newSelect = document.getElementById('newActivity');
+
+  newSelect.innerHTML = '<option value="">-- اختر --</option>';
+
+  const allowSame = ['clinic', 'hospital', 'lab'].includes(current);
+
+  allActivities.forEach(act => {
+    if (act.value === current && !allowSame) {
+      return;
+    }
+    const option = document.createElement('option');
+    option.value = act.value;
+    option.textContent = act.label;
+    newSelect.appendChild(option);
+  });
+
+  handleNewActivityChange();
+}
+
+function handleNewActivityChange() {
+  const newActivity = document.getElementById('newActivity').value;
+  const currentActivity = document.getElementById('currentActivity').value;
+  const typeGroup = document.getElementById('establishmentTypeGroup');
+  const typeSelect = document.getElementById('establishmentType');
+
+  const showType = ['clinic', 'hospital', 'lab'].includes(newActivity);
+
+  if (showType) {
+    typeGroup.classList.remove('hidden');
+
+    const types = establishmentTypes[newActivity] || [];
+    typeSelect.innerHTML = '<option value="">-- اختر --</option>';
+
+    types.forEach(type => {
+      if (newActivity === currentActivity && type.value === currentEstablishmentType) {
+        return;
+      }
+      const option = document.createElement('option');
+      option.value = type.value;
+      option.textContent = type.label;
+      typeSelect.appendChild(option);
+    });
+  } else {
+    typeGroup.classList.add('hidden');
+    typeSelect.innerHTML = '<option value="">-- اختر --</option>';
+  }
+}
+
+function validatePage4() {
+  const currentActivity = document.getElementById('currentActivity').value;
+  const licenseNumber = document.getElementById('licenseNumber').value;
+  const newActivity = document.getElementById('newActivity').value;
+
+  if (!currentActivity) {
+    alert('الرجاء اختيار النشاط الحالي');
+    return false;
+  }
+  if (!licenseNumber) {
+    alert('الرجاء اختيار رقم الترخيص التشغيلي');
+    return false;
+  }
+  if (!newActivity) {
+    alert('الرجاء اختيار النشاط المراد الانتقال إليه');
+    return false;
+  }
+
+  const showType = ['clinic', 'hospital', 'lab'].includes(newActivity);
+  if (showType) {
+    const estType = document.getElementById('establishmentType').value;
+    if (!estType) {
+      alert('الرجاء اختيار نوع المنشأة');
+      return false;
+    }
+  }
+
+  return true;
+}
+</script>
+
+</body>
+</html>

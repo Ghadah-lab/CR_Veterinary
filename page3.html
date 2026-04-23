@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>البيانات المسترجعة - تغيير نشاط لمنشأة بيطرية</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Header -->
+<header class="main-header">
+  <div class="logo">
+    <div class="logo-icon">ن</div>
+    <div>
+      <div class="logo-text">نماء</div>
+      <div class="logo-sub">NAAMA</div>
+    </div>
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="#" class="highlight">دليل الخدمات الإلكترونية</a></li>
+      <li><a href="#">منصتي</a></li>
+      <li><a href="#">الأخبار والأحداث</a></li>
+      <li><a href="#">عن نماء</a></li>
+      <li><a href="#">الأسئلة الشائعة</a></li>
+      <li><a href="#">تواصل معنا</a></li>
+    </ul>
+  </nav>
+  <div class="user-actions">
+    <div class="lang-switch">
+      <i class="fas fa-globe"></i>
+      <span>English</span>
+    </div>
+    <div class="lang-switch">
+      <i class="fas fa-user"></i>
+      <span>Test Company</span>
+    </div>
+  </div>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="breadcrumb">
+    <a href="index.html">الرئيسية</a>
+    <span class="sep">&gt;</span>
+    <a href="#">دليل الخدمات الإلكترونية</a>
+    <span class="sep">&gt;</span>
+    <span class="current">تغيير نشاط لمنشأة بيطرية</span>
+  </div>
+  <div class="hero-content">
+    <div class="hero-main">
+      <h1 class="hero-title">تغيير نشاط لمنشأة بيطرية</h1>
+      <div class="hero-tags">
+        <span class="tag">خدمات الرخص</span>
+        <span class="tag">الثروة الحيوانية</span>
+        <span class="tag">تراخيص للمنشآت البيطرية</span>
+      </div>
+    </div>
+    <div class="hero-icon">
+      <i class="fas fa-paw"></i>
+    </div>
+  </div>
+</div>
+
+<!-- Wizard - RTL Order: Step 1 (right) -> Step 5 (left) -->
+<div class="wizard-container">
+  <div class="wizard">
+    <div class="wizard-step completed">
+      <div class="step-number"><i class="fas fa-check"></i></div>
+      <div class="step-label">اتفاقية الاستخدام</div>
+    </div>
+    <div class="wizard-step active">
+      <div class="step-number">2</div>
+      <div class="step-label">البيانات المسترجعة</div>
+    </div>
+    <div class="wizard-step">
+      <div class="step-number">3</div>
+      <div class="step-label">بيانات الطلب</div>
+    </div>
+    <div class="wizard-step">
+      <div class="step-number">4</div>
+      <div class="step-label">مرفقات الطلب</div>
+    </div>
+    <div class="wizard-step">
+      <div class="step-number">5</div>
+      <div class="step-label">مراجعة الطلب</div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      <div class="card-title">
+        <i class="fas fa-database"></i>
+        بيانات مقدم الطلب
+      </div>
+      <span style="color: #7f8c8d; font-size: 0.85rem; font-weight: 600;">
+        <i class="fas fa-info-circle" style="margin-left: 0.3rem;"></i>
+        هي البيانات المسترجعة من خلال النظام
+      </span>
+    </div>
+    <div class="card-body">
+      <div class="form-row form-row-3">
+        <div class="form-group">
+          <label class="form-label">الرقم الموحد للسجل التجاري</label>
+          <input type="text" class="form-control" value="7023343903" readonly>
+        </div>
+        <div class="form-group">
+          <label class="form-label">اسم الشركة</label>
+          <input type="text" class="form-control" value="Test Company" readonly>
+        </div>
+        <div class="form-group">
+          <label class="form-label">العنوان الوطني</label>
+          <input type="text" class="form-control" value="3599 1 7508 42765" readonly>
+        </div>
+      </div>
+
+      <div class="form-row form-row-3">
+        <div class="form-group">
+          <label class="form-label">رقم الجوال</label>
+          <input type="text" class="form-control" value="05535135861" readonly>
+        </div>
+        <div class="form-group">
+          <label class="form-label">البريد الإلكتروني</label>
+          <input type="text" class="form-control" value="sheahmed@mewa.gov.sa" readonly>
+        </div>
+        <div class="form-group">
+          <!-- Empty for alignment -->
+        </div>
+      </div>
+
+      <!-- Actions Bar - RTL: Next (right) | Counter | Previous (left) -->
+      <div class="actions-bar">
+        <div style="display: flex; gap: 0.75rem;">
+          <a href="page4.html" class="btn btn-success">
+            التالي
+            <i class="fas fa-arrow-left"></i>
+          </a>
+          <a href="index.html" class="btn btn-danger">
+            <i class="fas fa-times"></i>
+            إلغاء الطلب
+          </a>
+        </div>
+        <div style="color: #95a5a6; font-size: 0.85rem; font-weight: 600;">
+          2 / 5
+        </div>
+        <div style="display: flex; gap: 0.75rem;">
+          <a href="page2.html" class="btn btn-secondary">
+            <i class="fas fa-arrow-right"></i>
+            السابق
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="main-footer">
+  <div class="footer-content">
+    <div>
+      <div class="footer-title">روابط تهمك</div>
+      <ul class="footer-links">
+        <li><a href="#">منصق العملك</a></li>
+        <li><a href="#">كيف تصل إلى موقعنا</a></li>
+        <li><a href="#">النصة الوطنية الموحدة</a></li>
+        <li><a href="#">وزارة البيئة والمياه والزراعة</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-title">أبرز خدمات الأفراد</div>
+      <ul class="footer-links">
+        <li><a href="#">إصدار سجل منشأة</a></li>
+        <li><a href="#">طلب ترخيص ثروة حيوانية</a></li>
+        <li><a href="#">برنامج دعم صغار مربي الثروة الحيوانية</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-title">أبرز خدمات الأعمال</div>
+      <ul class="footer-links">
+        <li><a href="#">طلب عمالة زراعية</a></li>
+        <li><a href="#">إصدار استيراد حضائر وقواته</a></li>
+        <li><a href="#">حجز موعد مسالخ</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-title">تواصل معنا</div>
+      <ul class="footer-links">
+        <li><a href="#"><i class="fas fa-phone" style="margin-left: 0.5rem;"></i> 199099</a></li>
+        <li><a href="#"><i class="fas fa-envelope" style="margin-left: 0.5rem;"></i> support@naama.sa</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    جميع الحقوق محفوظة © 2025 منصة نماء
+  </div>
+</footer>
+
+</body>
+</html>
